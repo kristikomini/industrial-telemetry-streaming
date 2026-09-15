@@ -85,6 +85,15 @@ consecutive-breach counter per machine, emits `CRITICAL_ALERT` only on the third
 successive reading above 90 °C, and resets the counter the moment a normal reading
 arrives. Threshold and window live in `processor/processor.py` as named constants.
 
+**At-least-once alert delivery with idempotent writes.** The .NET consumer does not
+auto-commit. It commits an offset only *after* the alert is durably in Postgres, and on a
+transient failure it rewinds to the offset and retries rather than committing past it — so
+a crash between the broker and the database can never silently drop an alert. Redelivery is
+made safe by a unique index on `(machine_id, timestamp)`: the repository's insert is
+idempotent, so a replayed message is a no-op rather than a duplicate row, and the dashboard
+is not notified twice. That same unique key is what lets the top-failing query resolve each
+machine's latest row in a single join instead of a query per machine.
+
 **Cache-aside on the read path.** `GET /api/alerts/latest-status` checks Redis first and
 falls back to Postgres on a miss, with a 5-minute TTL. The Kafka consumer also writes the
 key as alerts land, so the hot path is usually warm rather than waiting to be filled by a
@@ -178,17 +187,9 @@ way they are:
   `--partitions 1`, which caps the consumer group at one useful member. The keying above
   is what *makes* scale-out safe, but this configuration does not yet demonstrate it.
   Raising the count and running two processor replicas is the natural next commit.
-- **The .NET consumer auto-commits.** Offsets can be committed before
-  `SaveChangesAsync` completes, so a crash in that window drops an alert. The fix is
-  `EnableAutoCommit = false` and an explicit `Commit()` after the write, which moves the
-  system from roughly at-most-once to at-least-once and makes the Postgres insert
-  idempotent by alert key.
 - **Processor state is in-process and not checkpointed.** Restarting the processor
   forgets every machine's consecutive count. Reasonable at a 3-reading window; not
   reasonable if the rule ever spans minutes.
-- **`GetTopFailingWithCountsAsync` is an N+1.** It groups for counts, then issues one
-  query per machine for the latest row. At `limit ≤ 20` it is invisible, but it is a
-  window function's job, not a loop's.
 - **CORS is `AllowAnyOrigin`** and `BackgroundServiceExceptionBehavior` is set to
   `Ignore`, which keeps the host alive when the consumer throws but also hides that it
   did. Both are demo-shaped, not production-shaped.

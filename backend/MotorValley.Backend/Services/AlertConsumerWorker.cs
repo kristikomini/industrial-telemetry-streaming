@@ -30,6 +30,10 @@ public class AlertConsumerWorker : BackgroundService
             BootstrapServers = bootstrap,
             GroupId = groupId,
             AutoOffsetReset = AutoOffsetReset.Earliest,
+            // At-least-once: we commit the offset ourselves only after the alert is
+            // durably persisted, rather than letting the client auto-commit ahead of
+            // the database write.
+            EnableAutoCommit = false,
         };
 
         while (!stoppingToken.IsCancellationRequested)
@@ -42,14 +46,31 @@ public class AlertConsumerWorker : BackgroundService
                 while (!stoppingToken.IsCancellationRequested)
                 {
                     var result = consumer.Consume(stoppingToken);
+
+                    CriticalAlertDto? dto;
                     try
                     {
-                        var dto = JsonSerializer.Deserialize<CriticalAlertDto>(result.Message.Value);
-                        if (dto == null) continue;
+                        dto = JsonSerializer.Deserialize<CriticalAlertDto>(result.Message.Value);
+                    }
+                    catch (JsonException ex)
+                    {
+                        // Malformed payload — a poison message. Commit past it so it does
+                        // not block the partition forever; there is nothing to retry.
+                        Console.WriteLine($"Skipping malformed alert at offset {result.Offset}: {ex.Message}");
+                        consumer.Commit(result);
+                        continue;
+                    }
 
+                    if (dto == null)
+                    {
+                        consumer.Commit(result);
+                        continue;
+                    }
+
+                    try
+                    {
                         using var scope = _services.CreateScope();
                         var repo = scope.ServiceProvider.GetRequiredService<IAlertRepository>();
-                        var hub = scope.ServiceProvider.GetRequiredService<IHubContext<AlertHub>>();
 
                         var alert = new CriticalAlert
                         {
@@ -60,16 +81,34 @@ public class AlertConsumerWorker : BackgroundService
                             Timestamp = DateTime.TryParse(dto.Timestamp, out var ts) ? ts : DateTime.UtcNow
                         };
 
-                        await repo.AddAsync(alert, stoppingToken);
-                        await hub.Clients.All.SendAsync("ReceiveAlert", alert, stoppingToken);
+                        // Idempotent write: on a redelivered message this returns false and
+                        // we skip the fan-out, so the dashboard is not notified twice.
+                        var inserted = await repo.AddAsync(alert, stoppingToken);
+                        if (inserted)
+                        {
+                            var hub = scope.ServiceProvider.GetRequiredService<IHubContext<AlertHub>>();
+                            await hub.Clients.All.SendAsync("ReceiveAlert", alert, stoppingToken);
 
-                        var cache = scope.ServiceProvider.GetRequiredService<ICacheService>();
-                        var latest = new MotorValley.Backend.Models.LatestStatusDto(alert.MachineId, alert.Temperature, alert.Message, alert.Timestamp);
-                        await cache.SetAsync("motorvalley:latest-status", latest, TimeSpan.FromMinutes(5), stoppingToken);
+                            var cache = scope.ServiceProvider.GetRequiredService<ICacheService>();
+                            var latest = new MotorValley.Backend.Models.LatestStatusDto(alert.MachineId, alert.Temperature, alert.Message, alert.Timestamp);
+                            await cache.SetAsync("motorvalley:latest-status", latest, TimeSpan.FromMinutes(5), stoppingToken);
+                        }
+
+                        // Commit only now that the alert is durably persisted.
+                        consumer.Commit(result);
+                    }
+                    catch (OperationCanceledException)
+                    {
+                        throw;
                     }
                     catch (Exception ex)
                     {
-                        Console.WriteLine($"Alert processing error: {ex.Message}");
+                        // Transient failure (e.g. the database is momentarily unavailable).
+                        // Rewind to this offset and retry rather than committing past it, so
+                        // the alert is never silently dropped — at-least-once, in order.
+                        Console.WriteLine($"Processing failed at offset {result.Offset}, rewinding to retry: {ex.Message}");
+                        consumer.Seek(result.TopicPartitionOffset);
+                        await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken);
                     }
                 }
             }

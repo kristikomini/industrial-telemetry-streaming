@@ -16,8 +16,14 @@ public class AppDbContext : DbContext
             e.HasKey(x => x.Id);
             e.Property(x => x.MachineId).HasMaxLength(64);
             e.Property(x => x.Message).HasMaxLength(128);
-            e.HasIndex(x => x.MachineId);
             e.HasIndex(x => x.Timestamp);
+            // A processor emits at most one alert per machine per breach event, stamped
+            // with a UTC timestamp — so (MachineId, Timestamp) uniquely identifies an
+            // event. The unique index is the database-level guarantee that a redelivered
+            // Kafka message cannot create a duplicate row (see AlertRepository.AddAsync),
+            // and it also makes the "latest row per machine" join in
+            // GetTopFailingWithCountsAsync unambiguous.
+            e.HasIndex(x => new { x.MachineId, x.Timestamp }).IsUnique();
         });
     }
 }

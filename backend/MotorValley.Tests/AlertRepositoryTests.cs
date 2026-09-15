@@ -57,6 +57,19 @@ public class AlertRepositoryTests : IDisposable
     }
 
     [Fact]
+    public async Task AddAsync_IsIdempotent_ByMachineIdAndTimestamp()
+    {
+        var repo = new AlertRepository(_db);
+        var ts = DateTime.UtcNow;
+        var first = await repo.AddAsync(new CriticalAlert { MachineId = "M-DUP", Temperature = 95, ConsecutiveCount = 3, Message = "CRITICAL", Timestamp = ts });
+        var second = await repo.AddAsync(new CriticalAlert { MachineId = "M-DUP", Temperature = 95, ConsecutiveCount = 3, Message = "CRITICAL", Timestamp = ts });
+
+        Assert.True(first);   // first write persists
+        Assert.False(second); // redelivered duplicate is a no-op
+        Assert.Equal(1, await _db.CriticalAlerts.CountAsync(x => x.MachineId == "M-DUP"));
+    }
+
+    [Fact]
     public async Task GetTopFailingWithCounts_ReturnsAlertCount()
     {
         var repo = new AlertRepository(_db);
