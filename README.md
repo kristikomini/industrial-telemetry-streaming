@@ -1,5 +1,9 @@
 # Motor Valley Sentinel
 
+[![CI](https://github.com/kristikomini/Motor-Valley-Sentinel/actions/workflows/ci.yml/badge.svg)](https://github.com/kristikomini/Motor-Valley-Sentinel/actions/workflows/ci.yml)
+[![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-informational)](LICENSE)
+
 Real-time condition monitoring for a factory floor. 120 simulated machines stream
 temperature and RPM into Kafka; a stateful stream processor watches each machine for a
 sustained overheat and republishes a critical alert; a .NET service consumes those alerts,
