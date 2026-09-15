@@ -8,13 +8,38 @@ persists them, and pushes them to a live dashboard over WebSockets.
 The domain is the one on my doorstep — engine dynos and packaging lines, the machinery
 that Emilia-Romagna actually builds.
 
-```
-[120 sensors] ──> sensor-data ──> [processor] ──> critical-alerts ──> [.NET consumer] ──> PostgreSQL
-   Python          (Kafka)          Python            (Kafka)              C#          ├─> Redis
-   asyncio                          FastAPI                                            └─> SignalR ──> [React dashboard]
+```mermaid
+flowchart LR
+    S["120 sensors<br/><i>Python · asyncio</i>"]:::py
+    T1(["sensor-data"]):::kafka
+    P["Stream processor<br/><i>Python · FastAPI</i><br/>per-machine state"]:::py
+    T2(["critical-alerts"]):::kafka
+    C["Alert consumer<br/><i>.NET 8 · C#</i>"]:::net
+    API["REST API<br/><i>.NET 8 · C#</i>"]:::net
+    HUB["SignalR hub"]:::net
+    DB[("PostgreSQL / Oracle")]:::infra
+    R[("Redis")]:::infra
+    UI["React dashboard<br/><i>TypeScript</i>"]:::ui
+
+    S -->|keyed by machine_id| T1 --> P -->|3× over 90°C| T2 --> C
+    C --> DB
+    C --> R
+    C --> HUB
+    API --> R
+    API --> DB
+    HUB -.->|WebSocket push| UI
+    API -->|top-failing| UI
+
+    classDef py fill:#3776ab,stroke:#2b5b84,color:#fff
+    classDef net fill:#512bd4,stroke:#3b1f9c,color:#fff
+    classDef kafka fill:#ffc857,stroke:#c79a3f,color:#111
+    classDef infra fill:#334155,stroke:#1e293b,color:#fff
+    classDef ui fill:#00d9a5,stroke:#00a37c,color:#062b22
 ```
 
-Five services, five languages' worth of moving parts, one `docker compose up`.
+<sub>Five services, five languages' worth of moving parts, one `docker compose up`. See
+[Running it in the cloud](#running-it-in-the-cloud) for the Azure PaaS equivalent of this
+topology.</sub>
 
 ---
 

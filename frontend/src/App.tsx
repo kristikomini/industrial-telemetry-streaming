@@ -2,7 +2,8 @@ import { useEffect, useState, useCallback } from 'react'
 import { AlertFeed } from './components/AlertFeed'
 import { MachineHealthChart, type TopFailingMachine } from './components/MachineHealthChart'
 import { ChartSkeleton } from './components/ChartSkeleton'
-import { useAlertHub } from './hooks/useAlertHub'
+import { StatBar } from './components/StatBar'
+import { useAlertHub, type ConnectionStatus } from './hooks/useAlertHub'
 
 export interface CriticalAlert {
   id: number
@@ -21,12 +22,20 @@ async function fetchTopFailing(limit = 5): Promise<TopFailingMachine[]> {
   return res.json()
 }
 
+const STATUS_DISPLAY: Record<ConnectionStatus, { label: string; color: string }> = {
+  connecting: { label: 'Connecting…', color: 'var(--muted)' },
+  connected: { label: 'Live', color: 'var(--accent)' },
+  reconnecting: { label: 'Reconnecting…', color: 'var(--warning)' },
+  disconnected: { label: 'Offline', color: 'var(--alert)' },
+}
+
 function App() {
   const [topFailing, setTopFailing] = useState<TopFailingMachine[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
-  const { alerts, connected } = useAlertHub()
+  const { alerts, status } = useAlertHub()
+  const conn = STATUS_DISPLAY[status]
 
   const load = useCallback(async () => {
     try {
@@ -61,11 +70,14 @@ function App() {
         </h1>
         <p style={{ color: 'var(--muted)', margin: '0.25rem 0 0', display: 'flex', alignItems: 'center', gap: 8, flexWrap: 'wrap' }}>
           Factory floor alerts — real-time via SignalR
-          {connected && (
-            <span style={{ color: 'var(--accent)', fontWeight: 600 }}>
-              ● Live
-            </span>
-          )}
+          <span
+            role="status"
+            aria-live="polite"
+            aria-label={`Realtime connection: ${conn.label}`}
+            style={{ color: conn.color, fontWeight: 600 }}
+          >
+            <span aria-hidden="true">● </span>{conn.label}
+          </span>
           {lastUpdated && !loading && (
             <span style={{ fontSize: '0.875rem' }}>
               · Last updated {lastUpdated.toLocaleTimeString()}
@@ -109,6 +121,8 @@ function App() {
           </button>
         </div>
       )}
+
+      <StatBar alerts={alerts} />
 
       <div
         style={{

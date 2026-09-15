@@ -24,6 +24,10 @@ export function AlertFeed({ alerts }: AlertFeedProps) {
 
   return (
     <div
+      role="log"
+      aria-live="polite"
+      aria-relevant="additions"
+      aria-label="Live critical alert feed"
       style={{
         display: 'flex',
         flexDirection: 'column',

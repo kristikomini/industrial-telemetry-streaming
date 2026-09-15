@@ -1,0 +1,1 @@
+{"root":["./src/app.tsx","./src/main.tsx","./src/vite-env.d.ts","./src/components/alertfeed.tsx","./src/components/chartskeleton.tsx","./src/components/errorboundary.tsx","./src/components/machinehealthchart.tsx","./src/components/statbar.tsx","./src/hooks/usealerthub.ts"],"version":"5.6.3"}
