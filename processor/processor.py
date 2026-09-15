@@ -11,8 +11,7 @@ from collections import defaultdict
 from dataclasses import dataclass, asdict
 from datetime import datetime
 
-from aiokafka import AIOKafkaConsumer, AIOKafkaProducer
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 
 logging.basicConfig(
     level=logging.INFO,
@@ -20,9 +19,16 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+# Transport selects how readings arrive and how alerts are published:
+#   "kafka" (default) — consume sensor-data, publish critical-alerts (the Docker path).
+#   "http"            — receive readings on POST /ingest, forward alerts to the backend
+#                       over HTTP (the no-Docker path, no broker required).
+TRANSPORT = os.getenv("TRANSPORT", "kafka").lower()
+
 KAFKA_BOOTSTRAP = os.getenv("KAFKA_BOOTSTRAP_SERVERS", "localhost:9093")
 SENSOR_TOPIC = os.getenv("SENSOR_TOPIC", "sensor-data")
 ALERTS_TOPIC = os.getenv("ALERTS_TOPIC", "critical-alerts")
+BACKEND_URL = os.getenv("BACKEND_URL", "http://localhost:5000")
 WINDOW_SIZE = 5
 CRITICAL_THRESHOLD = 90.0
 CONSECUTIVE_COUNT = 3
@@ -81,7 +87,9 @@ class TemperatureProcessor:
 processor = TemperatureProcessor()
 
 
-async def consume_sensors(producer: AIOKafkaProducer) -> None:
+async def consume_sensors(producer) -> None:
+    from aiokafka import AIOKafkaConsumer
+
     consumer = AIOKafkaConsumer(
         SENSOR_TOPIC,
         bootstrap_servers=KAFKA_BOOTSTRAP,
@@ -111,21 +119,56 @@ async def consume_sensors(producer: AIOKafkaProducer) -> None:
 
 @app.on_event("startup")
 async def startup() -> None:
+    if TRANSPORT == "http":
+        # No broker: readings arrive on POST /ingest and alerts go out over HTTP.
+        import httpx
+
+        app.state.http_client = httpx.AsyncClient(timeout=5.0)
+        logger.info("Processor started in HTTP transport mode, backend=%s", BACKEND_URL)
+        return
+
+    from aiokafka import AIOKafkaProducer
+
     producer = AIOKafkaProducer(bootstrap_servers=KAFKA_BOOTSTRAP)
     await producer.start()
     app.state.kafka_producer = producer
     asyncio.create_task(consume_sensors(producer))
+    logger.info("Processor started in Kafka transport mode, bootstrap=%s", KAFKA_BOOTSTRAP)
 
 
 @app.on_event("shutdown")
 async def shutdown() -> None:
     if hasattr(app.state, "kafka_producer"):
         await app.state.kafka_producer.stop()
+    if hasattr(app.state, "http_client"):
+        await app.state.http_client.aclose()
+
+
+@app.post("/ingest")
+async def ingest(request: Request) -> dict:
+    """HTTP transport: accept one sensor reading, run the per-machine rule, and forward
+    any resulting alert to the backend. Mirrors what consume_sensors does over Kafka."""
+    data = await request.json()
+    mid = data["machine_id"]
+    temp = data["temperature"]
+    alert = processor.process(mid, temp)
+    if alert:
+        try:
+            resp = await app.state.http_client.post(
+                f"{BACKEND_URL}/api/ingest/alert",
+                content=alert.to_json(),
+                headers={"Content-Type": "application/json"},
+            )
+            resp.raise_for_status()
+            logger.info("CRITICAL_ALERT: %s T=%.1f°C", mid, temp)
+        except Exception as e:
+            logger.error("Failed to forward alert for %s: %s", mid, e)
+    return {"alerted": alert is not None}
 
 
 @app.get("/health")
 def health() -> dict:
-    return {"status": "ok"}
+    return {"status": "ok", "transport": TRANSPORT}
 
 
 @app.get("/moving-average/{machine_id}")

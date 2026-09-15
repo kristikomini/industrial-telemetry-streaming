@@ -3,10 +3,16 @@ node_modules/
 __pycache__/
 *.py[cod]
 .venv/
+.venv-local/
 venv/
 env/
 *.egg-info/
 .eggs/
+
+# Local (no-Docker) SQLite database
+*.db
+*.db-shm
+*.db-wal
 
 # Build
 dist/

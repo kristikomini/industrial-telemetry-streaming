@@ -115,6 +115,8 @@ staleness between an overheat and the operator seeing it.
 
 ## Running it
 
+### With Docker (the full topology)
+
 Requires Docker and Docker Compose. Nothing else — no local .NET, Python, or Node needed.
 
 ```bash
@@ -132,10 +134,96 @@ Host ports are deliberately offset from the defaults — Kafka on **9093**, Redi
 Topics (`sensor-data`, `critical-alerts`) are created by a one-shot `kafka-init` service,
 and the backend waits on its completion rather than racing it.
 
+### Without Docker (native, zero infra to install)
+
+The three pieces that force Docker — Kafka, PostgreSQL, and Redis — each sit behind a
+seam, so the stack also runs with **just the language runtimes** and no broker, database
+server, or cache to install:
+
+| In Docker | Native substitute | Selected by |
+|---|---|---|
+| Kafka topics | direct **HTTP** between producer → processor → backend | `TRANSPORT=http`, `Kafka:Enabled=false` |
+| PostgreSQL | **SQLite** (a single `motorvalley.db` file) | `Database:Provider=Sqlite` |
+| Redis | **in-process memory cache** | `Cache:Provider=Memory` |
+
+None of the application logic changes — the alerting rule, the idempotent write, the
+cache-aside read, and the SignalR push are identical on both paths. Only the transport and
+the two backing stores are swapped by configuration.
+
+Prerequisites: the **.NET 8 SDK**, **Python 3.10+**, and **Node.js 18+**. Then, from the
+repo root:
+
+```bash
+# Windows (PowerShell)
+.\run-local.ps1
+
+# macOS / Linux / WSL
+./run-local.sh
+```
+
+The script creates a Python virtualenv, installs dependencies, and launches all four
+services wired to the substitutes above (same URLs as the Docker table). Pass a smaller
+fleet with `-Machines 40` (PowerShell) or `./run-local.sh 40` (bash) for a lighter run.
+
+The backend's no-Docker configuration lives in
+[`appsettings.Local.json`](backend/MotorValley.Backend/appsettings.Local.json) and is
+activated by the `Local` launch profile (`dotnet run --launch-profile Local`); the Python
+services take `TRANSPORT=http` via environment variables the script sets for you.
+
+### Feeding it live data over OPC UA
+
+By default the producer invents readings with the built-in simulator. It can instead read **live
+values from an OPC UA server** — the protocol real PLCs and machine controllers speak — by
+setting `SOURCE=opcua`. The default target is the free
+[Prosys OPC UA Simulation Server](https://www.prosysopc.com/products/opc-ua-simulation-server/)
+on its standard endpoint `opc.tcp://localhost:53530/OPCUA/SimulationServer`.
+
+```powershell
+# Windows: start Prosys, then
+.\run-local.ps1 -Source opcua
+```
+```bash
+# macOS / Linux / WSL
+SOURCE=opcua ./run-local.sh
+```
+
+The producer connects with `asyncua`, discovers the server's `Simulation` folder by its
+namespace URI (robust to the namespace index changing between versions), and reads the
+`Sinusoid` signal as the temperature driver. Prosys exposes a handful of shared signals
+rather than 120 distinct machines, so each machine is given a fixed offset off that one
+live waveform — the fleet spreads across a temperature band and alerts fire from
+server-driven values. To confirm connectivity and see the exact NodeIds your server
+exposes:
+
+```bash
+cd producer && python opcua_source.py
+```
+
+**Pointing at a real machine.** Prosys is itself a simulator — it proves the OPC UA client,
+subscription, and scaling work end to end, which is the same integration a real PLC needs.
+For a real server, override the node addresses instead of relying on discovery:
+
+```bash
+# a real per-machine temperature tag, e.g. from a Siemens/Beckhoff PLC
+export OPCUA_ENDPOINT="opc.tcp://plc.local:4840"
+export OPCUA_TEMPERATURE_NODE="ns=2;s=Line1.Machine7.Temperature"
+export OPCUA_RPM_NODE="ns=2;s=Line1.Machine7.RPM"
+```
+
+The scaling band (`OPCUA_TEMP_CENTER`, `OPCUA_TEMP_SWING`, `OPCUA_IN_MIN/MAX`) and signal
+browse names (`OPCUA_TEMPERATURE_SIGNAL`, `OPCUA_RPM_SIGNAL`) are all environment-tunable —
+see [`producer/opcua_source.py`](producer/opcua_source.py). Secured endpoints (certificates,
+username/password) would need credentials added to the `asyncua` client; anonymous access
+to the Prosys `None` security endpoint works out of the box.
+
 ### Watching it actually work
 
-Machines drift by a random walk, so alerts build rather than appear instantly. To watch
-the alert stream directly instead of through the dashboard:
+Each machine's temperature mean-reverts to a healthy resting point and only occasionally
+develops a sustained heating fault, so alerts are rare and clustered rather than constant —
+expect roughly one every few seconds across the fleet, building rather than appearing
+instantly. Intensity is tunable with the `SENSOR_FAULT_PROB`, `SENSOR_REVERSION`, and
+related environment variables in [`producer/sensor.py`](producer/sensor.py). To watch the
+alert stream directly instead of through the dashboard:
 
 ```bash
 docker compose exec kafka kafka-console-consumer --bootstrap-server kafka:9092 --topic critical-alerts --from-beginning
