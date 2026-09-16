@@ -32,7 +32,7 @@ param(
 $ErrorActionPreference = 'Stop'
 $root = $PSScriptRoot
 
-function Require-Command($name, $hint) {
+function Confirm-Command($name, $hint) {
     if (-not (Get-Command $name -ErrorAction SilentlyContinue)) {
         Write-Error "Required tool '$name' was not found on PATH. $hint"
         exit 1
@@ -40,9 +40,9 @@ function Require-Command($name, $hint) {
 }
 
 Write-Host "Checking prerequisites..." -ForegroundColor Cyan
-Require-Command dotnet "Install the .NET 8 SDK from https://dotnet.microsoft.com/download"
-Require-Command node   "Install Node.js 18+ from https://nodejs.org/"
-Require-Command npm    "Install Node.js 18+ (npm ships with it) from https://nodejs.org/"
+Confirm-Command dotnet "Install the .NET 8 SDK from https://dotnet.microsoft.com/download"
+Confirm-Command node   "Install Node.js 18+ from https://nodejs.org/"
+Confirm-Command npm    "Install Node.js 18+ (npm ships with it) from https://nodejs.org/"
 
 $pythonCmd = Get-Command python -ErrorAction SilentlyContinue
 if (-not $pythonCmd) { $pythonCmd = Get-Command python3 -ErrorAction SilentlyContinue }
