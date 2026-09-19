@@ -86,19 +86,19 @@ public class AlertConsumerWorker : BackgroundService
                         // the alert is never silently dropped — at-least-once, in order.
                         Console.WriteLine($"Processing failed at offset {result.Offset}, rewinding to retry: {ex.Message}");
                         consumer.Seek(result.TopicPartitionOffset);
-                        await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken);
+                        await Task.Delay(TimeSpan.FromSeconds(2d), stoppingToken);
                     }
                 }
             }
             catch (ConsumeException ex)
             {
                 Console.WriteLine($"Kafka consume error: {ex.Error.Reason}, retrying in 5s...");
-                await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(5d), stoppingToken);
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Kafka consumer error: {ex.Message}, retrying in 5s...");
-                await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);
+                await Task.Delay(TimeSpan.FromSeconds(5d), stoppingToken);
             }
         }
     }

@@ -54,7 +54,7 @@ public class AlertIngestionService : IAlertIngestionService
             await _hub.Clients.All.SendAsync("ReceiveAlert", alert, ct);
 
             var latest = new LatestStatusDto(alert.MachineId, alert.Temperature, alert.Message, alert.Timestamp);
-            await _cache.SetAsync("motorvalley:latest-status", latest, TimeSpan.FromMinutes(5), ct);
+            await _cache.SetAsync("motorvalley:latest-status", latest, TimeSpan.FromMinutes(5d), ct);
         }
 
         return inserted;
