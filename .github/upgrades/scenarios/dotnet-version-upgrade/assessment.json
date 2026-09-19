@@ -1,0 +1,551 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-09-19T19:18:06.7781105Z",
+  "analysisEndTime": "2026-09-19T19:18:12.6719029Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 2,
+      "issues": 4,
+      "incidents": 15,
+      "effort": 15
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 2,
+        "Optional": 2,
+        "Potential": 11,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 6,
+        "Project": 2,
+        "Api": 7
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "MotorValley.Backend\\MotorValley.Backend.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 12,
+      "properties": {
+        "appName": "MotorValley.Backend",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": false,
+        "numberOfFiles": 26,
+        "numberOfCodeFiles": 23,
+        "linesTotal": 1036,
+        "linesOfCode": 986,
+        "totalApiScanned": 1315,
+        "minLinesOfCodeToChange": 7,
+        "maxLinesOfCodeToChange": 7
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "a4f638fe-ed9d-4804-8e81-14617cbf01bc",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12",
+              "protected": "Microsoft.EntityFrameworkCore, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\MotorValley.Backend.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore, and replace with new package Microsoft.EntityFrameworkCore 10.0.12",
+            "label": "Microsoft.EntityFrameworkCore 8.0.10",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore",
+              "PackageVersion": "8.0.10",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "7a6aeffe-3b52-4141-a066-8d921d3c821f",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.12",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.12"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\MotorValley.Backend.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.12",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.12",
+            "label": "Microsoft.EntityFrameworkCore.Design 8.0.10",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Design",
+              "PackageVersion": "8.0.10",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "b27de4ae-6824-4a51-a402-3c697c4f1d60",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.12",
+              "protected": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.12"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\MotorValley.Backend.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.12",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Sqlite, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.12",
+            "label": "Microsoft.EntityFrameworkCore.Sqlite 8.0.10",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Sqlite",
+              "PackageVersion": "8.0.10",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "efaab9ee-dd92-49d4-a44c-a3f4c58c7095",
+          "ruleId": "NuGet.0005",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.Azure.SignalR, 1.28.0\n\nRecommendation:\n\nThe Microsoft.Azure.SignalR SDK v1.33.1 upgrades several dependencies to address known security vulnerabilities in earlier versions. Older SDK versions rely on these outdated components and may expose users to potential security risks. To ensure a secure default experience, all previous versions are marked as deprecated.\nRemove Microsoft.Azure.SignalR, and replace with new package Microsoft.Azure.SignalR, 1.33.1",
+              "protected": "Microsoft.Azure.SignalR, 1.28.0\n\nRecommendation:\n\nThe Microsoft.Azure.SignalR SDK v1.33.1 upgrades several dependencies to address known security vulnerabilities in earlier versions. Older SDK versions rely on these outdated components and may expose users to potential security risks. To ensure a secure default experience, all previous versions are marked as deprecated.\nRemove Microsoft.Azure.SignalR, and replace with new package Microsoft.Azure.SignalR, 1.33.1"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\MotorValley.Backend.csproj",
+            "snippet": "Microsoft.Azure.SignalR, 1.28.0\n\nRecommendation:\n\nThe Microsoft.Azure.SignalR SDK v1.33.1 upgrades several dependencies to address known security vulnerabilities in earlier versions. Older SDK versions rely on these outdated components and may expose users to potential security risks. To ensure a secure default experience, all previous versions are marked as deprecated.\nRemove Microsoft.Azure.SignalR, and replace with new package Microsoft.Azure.SignalR, 1.33.1",
+            "protectedSnippet": "Microsoft.Azure.SignalR, 1.28.0\n\nRecommendation:\n\nThe Microsoft.Azure.SignalR SDK v1.33.1 upgrades several dependencies to address known security vulnerabilities in earlier versions. Older SDK versions rely on these outdated components and may expose users to potential security risks. To ensure a secure default experience, all previous versions are marked as deprecated.\nRemove Microsoft.Azure.SignalR, and replace with new package Microsoft.Azure.SignalR, 1.33.1",
+            "label": "Microsoft.Azure.SignalR 1.28.0",
+            "properties": {
+              "PackageId": "Microsoft.Azure.SignalR",
+              "PackageVersion": "1.28.0",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "ffc8995e-e345-49b0-bbd2-12950ded24e8",
+          "ruleId": "Project.0002",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\MotorValley.Backend.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        },
+        {
+          "incidentId": "d62023cc-7b19-419a-a297-7a9c9794a5ef",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await _db.StringSetAsync(key, json, expiry ?? TimeSpan.FromMinutes(5));",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\Services\\RedisCacheService.cs",
+            "snippet": "await _db.StringSetAsync(key, json, expiry ?? TimeSpan.FromMinutes(5));",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "properties": {
+              "CharCount": "876"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 26,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "36029bc7-d071-493a-848c-ad5d5c147555",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "var expiresAt = DateTimeOffset.UtcNow.Add(expiry ?? TimeSpan.FromMinutes(5));",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\Services\\InMemoryCacheService.cs",
+            "snippet": "var expiresAt = DateTimeOffset.UtcNow.Add(expiry ?? TimeSpan.FromMinutes(5));",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "properties": {
+              "CharCount": "1553"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 33,
+            "column": 8
+          }
+        },
+        {
+          "incidentId": "15bf1c9d-e96b-4711-813a-ddce96032766",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await _cache.SetAsync(\u0022motorvalley:latest-status\u0022, latest, TimeSpan.FromMinutes(5), ct);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\Services\\AlertIngestionService.cs",
+            "snippet": "await _cache.SetAsync(\u0022motorvalley:latest-status\u0022, latest, TimeSpan.FromMinutes(5), ct);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "properties": {
+              "CharCount": "2420"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 56,
+            "column": 12
+          }
+        },
+        {
+          "incidentId": "be7ae45a-adf0-4064-88fb-430c7b17fb17",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\Services\\AlertConsumerWorker.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "4306"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 100,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "9df8dc29-07d1-49e9-adb5-478e9e06de7e",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\Services\\AlertConsumerWorker.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(5), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "4306"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 95,
+            "column": 16
+          }
+        },
+        {
+          "incidentId": "a74b2b7e-800e-49e3-83db-54136ef7b00a",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken);",
+              "protected": "M:System.TimeSpan.FromSeconds(System.Double)"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\Services\\AlertConsumerWorker.cs",
+            "snippet": "await Task.Delay(TimeSpan.FromSeconds(2), stoppingToken);",
+            "protectedSnippet": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "label": "M:System.TimeSpan.FromSeconds(System.Double)",
+            "properties": {
+              "CharCount": "4306"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 88,
+            "column": 24
+          }
+        },
+        {
+          "incidentId": "8c29e5e9-8c15-49b7-bc0c-301a7d449add",
+          "ruleId": "Api.0002",
+          "description": "Breaking change: New TimeSpan.From*() overloads that take integers ",
+          "projectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "await _cache.SetAsync(cacheKey, status, TimeSpan.FromMinutes(5), ct);",
+              "protected": "M:System.TimeSpan.FromMinutes(System.Double)"
+            },
+            "kind": "File",
+            "path": "MotorValley.Backend\\Controllers\\AlertsController.cs",
+            "snippet": "await _cache.SetAsync(cacheKey, status, TimeSpan.FromMinutes(5), ct);",
+            "protectedSnippet": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "label": "M:System.TimeSpan.FromMinutes(System.Double)",
+            "properties": {
+              "CharCount": "1520"
+            },
+            "links": [
+              {
+                "title": "API documentation",
+                "url": "https://github.com/dotnet/docs/blob/main/docs/core/compatibility/core-libraries/9.0/timespan-from-overloads.md",
+                "isCustom": false
+              }
+            ],
+            "line": 43,
+            "column": 12
+          }
+        }
+      ],
+      "features": []
+    },
+    {
+      "path": "MotorValley.Tests\\MotorValley.Tests.csproj",
+      "startingProject": true,
+      "issues": 3,
+      "storyPoints": 3,
+      "properties": {
+        "appName": "MotorValley.Tests",
+        "projectKind": "DotNetCoreApp",
+        "frameworks": [
+          "net8.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "isTestProject": true,
+        "numberOfFiles": 4,
+        "numberOfCodeFiles": 2,
+        "linesTotal": 1912,
+        "linesOfCode": 124,
+        "totalApiScanned": 287,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "9fff539e-2de5-4c75-ae4f-ccce2900a6d7",
+          "ruleId": "NuGet.0002",
+          "projectPath": "MotorValley.Tests\\MotorValley.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.InMemory, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.12",
+              "protected": "Microsoft.EntityFrameworkCore.InMemory, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.12"
+            },
+            "kind": "File",
+            "path": "MotorValley.Tests\\MotorValley.Tests.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.12",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.InMemory, 8.0.10\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.InMemory, and replace with new package Microsoft.EntityFrameworkCore.InMemory 10.0.12",
+            "label": "Microsoft.EntityFrameworkCore.InMemory 8.0.10",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.InMemory",
+              "PackageVersion": "8.0.10",
+              "PackageNewVersion": "10.0.12",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "1675cd04-f8c5-4358-9440-582ce8aeafa7",
+          "ruleId": "NuGet.0005",
+          "projectPath": "MotorValley.Tests\\MotorValley.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "xunit, 2.9.2\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+              "protected": "xunit, 2.9.2\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3"
+            },
+            "kind": "File",
+            "path": "MotorValley.Tests\\MotorValley.Tests.csproj",
+            "snippet": "xunit, 2.9.2\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "protectedSnippet": "xunit, 2.9.2\n\nRecommendation:\n\nThis package will only be updated for security issues. All future feature work has moved onto v3.\n\nGuide for migrating from xUnit.net v2 to v3: https://xunit.net/docs/getting-started/v3/migration\nRemove xunit, and replace with new package xunit, 2.9.3",
+            "label": "xunit 2.9.2",
+            "properties": {
+              "PackageId": "xunit",
+              "PackageVersion": "2.9.2",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "50ee3bb4-6003-446f-b368-3aefaab91f0c",
+          "ruleId": "Project.0002",
+          "projectPath": "MotorValley.Tests\\MotorValley.Tests.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net8.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net8.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "MotorValley.Tests\\MotorValley.Tests.csproj",
+            "snippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net8.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net8.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    },
+    "Api.0002": {
+      "id": "Api.0002",
+      "isFeature": false,
+      "description": "API is source incompatible for selected .NET version: requires code changes to compile successfully when targeting a new version, such as removing obsolete APIs or changing method signatures.",
+      "label": "Source incompatible for selected .NET version",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Breaking changes in .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262679",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}

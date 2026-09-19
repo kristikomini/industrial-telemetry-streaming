@@ -41,7 +41,7 @@ public class AlertsController : ControllerBase
 
         var status = await _repo.GetLatestStatusAsync(ct);
         if (status != null)
-            await _cache.SetAsync(cacheKey, status, TimeSpan.FromMinutes(5), ct);
+            await _cache.SetAsync(cacheKey, status, TimeSpan.FromMinutes(5d), ct);
 
         return Ok(status);
     }

@@ -1,0 +1,3945 @@
+{
+  "packageGovernance": {
+    "totalDistinctPackages": 97,
+    "totalVersionDriftInstances": 4,
+    "targetFramework": "net10.0",
+    "packages": [
+      {
+        "name": "Microsoft.Bcl.AsyncInterfaces",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 2,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          },
+          {
+            "version": "1.1.1",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": false
+          }
+        ]
+      },
+      {
+        "name": "SQLitePCLRaw.lib.e_sqlite3",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 2,
+        "recommendedVersion": "2.1.12-pre20260709125052",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.1.12-pre20260709125052",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          },
+          {
+            "version": "2.1.6",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": false
+          }
+        ]
+      },
+      {
+        "name": "System.IO.Pipelines",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 2,
+        "recommendedVersion": "6.0.3",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.3",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          },
+          {
+            "version": "5.0.1",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": false
+          }
+        ]
+      },
+      {
+        "name": "System.Reflection.Metadata",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 2,
+        "recommendedVersion": "6.0.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.1",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          },
+          {
+            "version": "1.6.0",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": false
+          }
+        ]
+      },
+      {
+        "name": "Azure.Core",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.38.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.38.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Azure.Identity",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.11.4",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.11.4",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Castle.Core",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "5.1.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "5.1.1",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Confluent.Kafka",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.6.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.6.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Humanizer.Core",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.14.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.14.1",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "librdkafka.redist",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.6.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.6.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Azure.SignalR",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.28.0",
+        "isCompatible": false,
+        "description": "NuGet package is deprecated",
+        "versions": [
+          {
+            "version": "1.28.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Azure.SignalR.Protocols",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.28.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.28.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.CodeAnalysis.Analyzers",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "3.3.3",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "3.3.3",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.CodeAnalysis.Common",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.CodeAnalysis.CSharp",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.CodeAnalysis.CSharp.Workspaces",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.CodeAnalysis.Workspaces.Common",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.CodeCoverage",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "17.11.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "17.11.1",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Data.Sqlite.Core",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.10",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.12",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.12"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Abstractions",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.10",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Analyzers",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.10",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Design",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.12",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.12"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.InMemory",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.12",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.12"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Relational",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.10",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Sqlite",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "10.0.12",
+        "isCompatible": true,
+        "description": "NuGet package upgrade is recommended",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": false
+          }
+        ],
+        "upgrade": {
+          "newVersion": "10.0.12"
+        }
+      },
+      {
+        "name": "Microsoft.EntityFrameworkCore.Sqlite.Core",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.10",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.ApiDescription.Server",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.5",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.5",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Caching.Abstractions",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Caching.Memory",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.1",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Configuration.Abstractions",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.DependencyInjection",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.1",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.2",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.DependencyModel",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.2",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Http",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.1.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.1.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Logging",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.1",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Logging.Abstractions",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.2",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Options",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.2",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Extensions.Primitives",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Identity.Client",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.61.3",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.61.3",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.Identity.Client.Extensions.Msal",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.61.3",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.61.3",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.IdentityModel.Abstractions",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.35.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.35.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.NET.Test.Sdk",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "17.11.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "17.11.1",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.OpenApi",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.6.22",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.6.22",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.TestPlatform.ObjectModel",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "17.11.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "17.11.1",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Microsoft.TestPlatform.TestHost",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "17.11.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "17.11.1",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Mono.TextTemplating",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.2.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.2.1",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Moq",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.20.72",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.20.72",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Newtonsoft.Json",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "13.0.3",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "13.0.3",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Npgsql",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.5",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.5",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Npgsql.EntityFrameworkCore.PostgreSQL",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.10",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.10",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Oracle.EntityFrameworkCore",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.23.60",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.23.60",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Oracle.ManagedDataAccess.Core",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "23.6.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "23.6.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Pipelines.Sockets.Unofficial",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.2.8",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.2.8",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "SQLitePCLRaw.bundle_e_sqlite3",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.1.6",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.1.6",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "SQLitePCLRaw.core",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.1.6",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.1.6",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "SQLitePCLRaw.provider.e_sqlite3",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.1.6",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.1.6",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "StackExchange.Redis",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.8.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.8.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Swashbuckle.AspNetCore",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "7.2.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "7.2.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Swashbuckle.AspNetCore.Swagger",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "7.2.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "7.2.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Swashbuckle.AspNetCore.SwaggerGen",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "7.2.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "7.2.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "Swashbuckle.AspNetCore.SwaggerUI",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "7.2.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "7.2.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Buffers",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.1",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.ClientModel",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.CodeDom",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.4.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.4.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Collections.Immutable",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Composition",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Composition.AttributedModel",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Composition.Convention",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Composition.Hosting",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Composition.Runtime",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Composition.TypedParts",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Configuration.ConfigurationManager",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Diagnostics.DiagnosticSource",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.1",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Diagnostics.EventLog",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Diagnostics.PerformanceCounter",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.DirectoryServices.Protocols",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Formats.Asn1",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.1",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.1",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Memory",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.4",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.4",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Memory.Data",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.0.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.0.2",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Numerics.Vectors",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Runtime.CompilerServices.Unsafe",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Security.Cryptography.Pkcs",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Security.Cryptography.ProtectedData",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "8.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "8.0.0",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Text.Encoding.CodePages",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Text.Encodings.Web",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.7.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.7.2",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Text.Json",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.7.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.7.2",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Threading.Channels",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "6.0.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "6.0.0",
+            "projects": [
+              "MotorValley.Backend"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "System.Threading.Tasks.Extensions",
+        "totalProjectCount": 2,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "4.5.4",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "4.5.4",
+            "projects": [
+              "MotorValley.Backend",
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.9.2",
+        "isCompatible": false,
+        "description": "NuGet package is deprecated",
+        "versions": [
+          {
+            "version": "2.9.2",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit.abstractions",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.0.3",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.0.3",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit.analyzers",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "1.16.0",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "1.16.0",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit.assert",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.9.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.9.2",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit.core",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.9.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.9.2",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit.extensibility.core",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.9.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.9.2",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit.extensibility.execution",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.9.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.9.2",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      },
+      {
+        "name": "xunit.runner.visualstudio",
+        "totalProjectCount": 1,
+        "distinctVersionCount": 1,
+        "recommendedVersion": "2.8.2",
+        "isCompatible": true,
+        "description": "",
+        "versions": [
+          {
+            "version": "2.8.2",
+            "projects": [
+              "MotorValley.Tests"
+            ],
+            "isRecommended": true
+          }
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "name": "MotorValley.Backend",
+      "path": "MotorValley.Backend\\MotorValley.Backend.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "net8.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Azure.Core",
+            "version": "1.38.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core"
+            ]
+          },
+          {
+            "name": "Azure.Identity",
+            "version": "1.11.4",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity"
+            ]
+          },
+          {
+            "name": "Confluent.Kafka",
+            "version": "2.6.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Humanizer.Core",
+            "version": "2.14.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Humanizer.Core"
+            ]
+          },
+          {
+            "name": "librdkafka.redist",
+            "version": "2.6.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Confluent.Kafka \u003E librdkafka.redist"
+            ]
+          },
+          {
+            "name": "Microsoft.Azure.SignalR",
+            "version": "1.28.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.Azure.SignalR.Protocols",
+            "version": "1.28.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Microsoft.Azure.SignalR.Protocols"
+            ]
+          },
+          {
+            "name": "Microsoft.Bcl.AsyncInterfaces",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E Microsoft.Bcl.AsyncInterfaces"
+            ]
+          },
+          {
+            "name": "Microsoft.CodeAnalysis.Analyzers",
+            "version": "3.3.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Common \u003E Microsoft.CodeAnalysis.Analyzers"
+            ]
+          },
+          {
+            "name": "Microsoft.CodeAnalysis.Common",
+            "version": "4.5.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Common"
+            ]
+          },
+          {
+            "name": "Microsoft.CodeAnalysis.CSharp",
+            "version": "4.5.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.CSharp"
+            ]
+          },
+          {
+            "name": "Microsoft.CodeAnalysis.CSharp.Workspaces",
+            "version": "4.5.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces"
+            ]
+          },
+          {
+            "name": "Microsoft.CodeAnalysis.Workspaces.Common",
+            "version": "4.5.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common"
+            ]
+          },
+          {
+            "name": "Microsoft.Data.Sqlite.Core",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Sqlite \u003E Microsoft.EntityFrameworkCore.Sqlite.Core \u003E Microsoft.Data.Sqlite.Core"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore",
+            "version": "8.0.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.12",
+            "upgrade": {
+              "newVersion": "10.0.12"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Abstractions",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore \u003E Microsoft.EntityFrameworkCore.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Analyzers",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore \u003E Microsoft.EntityFrameworkCore.Analyzers"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Design",
+            "version": "8.0.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.12",
+            "upgrade": {
+              "newVersion": "10.0.12"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Relational",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.EntityFrameworkCore.Relational"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Sqlite",
+            "version": "8.0.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.12",
+            "upgrade": {
+              "newVersion": "10.0.12"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Sqlite.Core",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Sqlite \u003E Microsoft.EntityFrameworkCore.Sqlite.Core"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.ApiDescription.Server",
+            "version": "6.0.5",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Swashbuckle.AspNetCore \u003E Microsoft.Extensions.ApiDescription.Server"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Caching.Abstractions",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Caching.Memory \u003E Microsoft.Extensions.Caching.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Caching.Memory",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Caching.Memory"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.Abstractions",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.EntityFrameworkCore.Relational \u003E Microsoft.Extensions.Configuration.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Logging \u003E Microsoft.Extensions.DependencyInjection"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Microsoft.Extensions.Http \u003E Microsoft.Extensions.DependencyInjection.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyModel",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.Extensions.DependencyModel"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Http",
+            "version": "2.1.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Microsoft.Extensions.Http"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Logging",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Logging"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Abstractions",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "StackExchange.Redis \u003E Microsoft.Extensions.Logging.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Options",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Microsoft.Extensions.Http \u003E Microsoft.Extensions.Options"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Primitives",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Microsoft.Azure.SignalR.Protocols \u003E Microsoft.Extensions.Primitives"
+            ]
+          },
+          {
+            "name": "Microsoft.Identity.Client",
+            "version": "4.61.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Microsoft.Identity.Client"
+            ]
+          },
+          {
+            "name": "Microsoft.Identity.Client.Extensions.Msal",
+            "version": "4.61.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Microsoft.Identity.Client.Extensions.Msal"
+            ]
+          },
+          {
+            "name": "Microsoft.IdentityModel.Abstractions",
+            "version": "6.35.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Microsoft.Identity.Client \u003E Microsoft.IdentityModel.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.OpenApi",
+            "version": "1.6.22",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.Swagger \u003E Microsoft.OpenApi"
+            ]
+          },
+          {
+            "name": "Mono.TextTemplating",
+            "version": "2.2.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Mono.TextTemplating"
+            ]
+          },
+          {
+            "name": "Newtonsoft.Json",
+            "version": "13.0.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Newtonsoft.Json"
+            ]
+          },
+          {
+            "name": "Npgsql",
+            "version": "8.0.5",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Npgsql.EntityFrameworkCore.PostgreSQL \u003E Npgsql"
+            ]
+          },
+          {
+            "name": "Npgsql.EntityFrameworkCore.PostgreSQL",
+            "version": "8.0.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Oracle.EntityFrameworkCore",
+            "version": "8.23.60",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Oracle.ManagedDataAccess.Core",
+            "version": "23.6.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core"
+            ]
+          },
+          {
+            "name": "Pipelines.Sockets.Unofficial",
+            "version": "2.2.8",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "StackExchange.Redis \u003E Pipelines.Sockets.Unofficial"
+            ]
+          },
+          {
+            "name": "SQLitePCLRaw.bundle_e_sqlite3",
+            "version": "2.1.6",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Sqlite \u003E SQLitePCLRaw.bundle_e_sqlite3"
+            ]
+          },
+          {
+            "name": "SQLitePCLRaw.core",
+            "version": "2.1.6",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Sqlite \u003E Microsoft.EntityFrameworkCore.Sqlite.Core \u003E Microsoft.Data.Sqlite.Core \u003E SQLitePCLRaw.core"
+            ]
+          },
+          {
+            "name": "SQLitePCLRaw.lib.e_sqlite3",
+            "version": "2.1.12-pre20260709125052",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "SQLitePCLRaw.provider.e_sqlite3",
+            "version": "2.1.6",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Sqlite \u003E SQLitePCLRaw.bundle_e_sqlite3 \u003E SQLitePCLRaw.provider.e_sqlite3"
+            ]
+          },
+          {
+            "name": "StackExchange.Redis",
+            "version": "2.8.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Swashbuckle.AspNetCore",
+            "version": "7.2.0",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Backend\\MotorValley.Backend.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.Swagger",
+            "version": "7.2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.Swagger"
+            ]
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.SwaggerGen",
+            "version": "7.2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.SwaggerGen"
+            ]
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.SwaggerUI",
+            "version": "7.2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.SwaggerUI"
+            ]
+          },
+          {
+            "name": "System.Buffers",
+            "version": "4.5.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Microsoft.Azure.SignalR.Protocols \u003E System.Buffers"
+            ]
+          },
+          {
+            "name": "System.ClientModel",
+            "version": "1.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.ClientModel"
+            ]
+          },
+          {
+            "name": "System.CodeDom",
+            "version": "4.4.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Mono.TextTemplating \u003E System.CodeDom"
+            ]
+          },
+          {
+            "name": "System.Collections.Immutable",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Common \u003E System.Collections.Immutable"
+            ]
+          },
+          {
+            "name": "System.Composition",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common \u003E System.Composition"
+            ]
+          },
+          {
+            "name": "System.Composition.AttributedModel",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common \u003E System.Composition \u003E System.Composition.AttributedModel"
+            ]
+          },
+          {
+            "name": "System.Composition.Convention",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common \u003E System.Composition \u003E System.Composition.Convention"
+            ]
+          },
+          {
+            "name": "System.Composition.Hosting",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common \u003E System.Composition \u003E System.Composition.Hosting"
+            ]
+          },
+          {
+            "name": "System.Composition.Runtime",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common \u003E System.Composition \u003E System.Composition.Runtime"
+            ]
+          },
+          {
+            "name": "System.Composition.TypedParts",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common \u003E System.Composition \u003E System.Composition.TypedParts"
+            ]
+          },
+          {
+            "name": "System.Configuration.ConfigurationManager",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Diagnostics.PerformanceCounter \u003E System.Configuration.ConfigurationManager"
+            ]
+          },
+          {
+            "name": "System.Diagnostics.DiagnosticSource",
+            "version": "6.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Diagnostics.DiagnosticSource"
+            ]
+          },
+          {
+            "name": "System.Diagnostics.EventLog",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Diagnostics.PerformanceCounter \u003E System.Configuration.ConfigurationManager \u003E System.Diagnostics.EventLog"
+            ]
+          },
+          {
+            "name": "System.Diagnostics.PerformanceCounter",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Diagnostics.PerformanceCounter"
+            ]
+          },
+          {
+            "name": "System.DirectoryServices.Protocols",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.DirectoryServices.Protocols"
+            ]
+          },
+          {
+            "name": "System.Formats.Asn1",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Formats.Asn1"
+            ]
+          },
+          {
+            "name": "System.IO.Pipelines",
+            "version": "6.0.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "StackExchange.Redis \u003E Pipelines.Sockets.Unofficial \u003E System.IO.Pipelines"
+            ]
+          },
+          {
+            "name": "System.Memory",
+            "version": "4.5.4",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Confluent.Kafka \u003E System.Memory"
+            ]
+          },
+          {
+            "name": "System.Memory.Data",
+            "version": "1.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Memory.Data"
+            ]
+          },
+          {
+            "name": "System.Numerics.Vectors",
+            "version": "4.5.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Numerics.Vectors"
+            ]
+          },
+          {
+            "name": "System.Reflection.Metadata",
+            "version": "6.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Common \u003E System.Reflection.Metadata"
+            ]
+          },
+          {
+            "name": "System.Runtime.CompilerServices.Unsafe",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Microsoft.Azure.SignalR.Protocols \u003E System.Runtime.CompilerServices.Unsafe"
+            ]
+          },
+          {
+            "name": "System.Security.Cryptography.Pkcs",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Security.Cryptography.Pkcs"
+            ]
+          },
+          {
+            "name": "System.Security.Cryptography.ProtectedData",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E System.Security.Cryptography.ProtectedData"
+            ]
+          },
+          {
+            "name": "System.Text.Encoding.CodePages",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Common \u003E System.Text.Encoding.CodePages"
+            ]
+          },
+          {
+            "name": "System.Text.Encodings.Web",
+            "version": "4.7.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Text.Encodings.Web"
+            ]
+          },
+          {
+            "name": "System.Text.Json",
+            "version": "4.7.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E System.Text.Json"
+            ]
+          },
+          {
+            "name": "System.Threading.Channels",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.Design \u003E Microsoft.CodeAnalysis.CSharp.Workspaces \u003E Microsoft.CodeAnalysis.Workspaces.Common \u003E System.Threading.Channels"
+            ]
+          },
+          {
+            "name": "System.Threading.Tasks.Extensions",
+            "version": "4.5.4",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.Azure.SignalR \u003E Azure.Identity \u003E System.Threading.Tasks.Extensions"
+            ]
+          }
+        ],
+        "assemblies": [],
+        "projectReferences": [],
+        "frameworkReferences": []
+      }
+    },
+    {
+      "name": "MotorValley.Tests",
+      "path": "MotorValley.Tests\\MotorValley.Tests.csproj",
+      "isSdk": true,
+      "currentFrameworks": [
+        "net8.0"
+      ],
+      "targetFramework": "net10.0",
+      "dependencies": {
+        "packages": [
+          {
+            "name": "Azure.Core",
+            "version": "1.38.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core"
+            ]
+          },
+          {
+            "name": "Azure.Identity",
+            "version": "1.11.4",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity"
+            ]
+          },
+          {
+            "name": "Castle.Core",
+            "version": "5.1.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Moq \u003E Castle.Core"
+            ]
+          },
+          {
+            "name": "Confluent.Kafka",
+            "version": "2.6.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Confluent.Kafka"
+            ]
+          },
+          {
+            "name": "librdkafka.redist",
+            "version": "2.6.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Confluent.Kafka \u003E librdkafka.redist"
+            ]
+          },
+          {
+            "name": "Microsoft.Azure.SignalR",
+            "version": "1.28.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR"
+            ]
+          },
+          {
+            "name": "Microsoft.Azure.SignalR.Protocols",
+            "version": "1.28.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Microsoft.Azure.SignalR.Protocols"
+            ]
+          },
+          {
+            "name": "Microsoft.Bcl.AsyncInterfaces",
+            "version": "1.1.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E Microsoft.Bcl.AsyncInterfaces"
+            ]
+          },
+          {
+            "name": "Microsoft.CodeCoverage",
+            "version": "17.11.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.NET.Test.Sdk \u003E Microsoft.CodeCoverage"
+            ]
+          },
+          {
+            "name": "Microsoft.Data.Sqlite.Core",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite \u003E Microsoft.EntityFrameworkCore.Sqlite.Core \u003E Microsoft.Data.Sqlite.Core"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.12",
+            "upgrade": {
+              "newVersion": "10.0.12"
+            },
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Abstractions",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.EntityFrameworkCore.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Analyzers",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.EntityFrameworkCore.Analyzers"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.InMemory",
+            "version": "8.0.10",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Tests\\MotorValley.Tests.csproj"
+              }
+            ],
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.12",
+            "upgrade": {
+              "newVersion": "10.0.12"
+            }
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Relational",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Npgsql.EntityFrameworkCore.PostgreSQL \u003E Microsoft.EntityFrameworkCore.Relational"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Sqlite",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "NuGet package upgrade is recommended",
+            "compatibility": "valid",
+            "recommendedVersion": "10.0.12",
+            "upgrade": {
+              "newVersion": "10.0.12"
+            },
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite"
+            ]
+          },
+          {
+            "name": "Microsoft.EntityFrameworkCore.Sqlite.Core",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite \u003E Microsoft.EntityFrameworkCore.Sqlite.Core"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.ApiDescription.Server",
+            "version": "6.0.5",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Swashbuckle.AspNetCore \u003E Microsoft.Extensions.ApiDescription.Server"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Caching.Abstractions",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Caching.Memory \u003E Microsoft.Extensions.Caching.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Caching.Memory",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Caching.Memory"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Configuration.Abstractions",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Npgsql.EntityFrameworkCore.PostgreSQL \u003E Microsoft.EntityFrameworkCore.Relational \u003E Microsoft.Extensions.Configuration.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Logging \u003E Microsoft.Extensions.DependencyInjection"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Caching.Memory \u003E Microsoft.Extensions.DependencyInjection.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.DependencyModel",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite \u003E Microsoft.EntityFrameworkCore.Sqlite.Core \u003E Microsoft.Extensions.DependencyModel"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Http",
+            "version": "2.1.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Microsoft.Extensions.Http"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Logging",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Logging"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Logging.Abstractions",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E StackExchange.Redis \u003E Microsoft.Extensions.Logging.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Options",
+            "version": "8.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Caching.Memory \u003E Microsoft.Extensions.Options"
+            ]
+          },
+          {
+            "name": "Microsoft.Extensions.Primitives",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.EntityFrameworkCore.InMemory \u003E Microsoft.EntityFrameworkCore \u003E Microsoft.Extensions.Caching.Memory \u003E Microsoft.Extensions.Primitives"
+            ]
+          },
+          {
+            "name": "Microsoft.Identity.Client",
+            "version": "4.61.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Microsoft.Identity.Client"
+            ]
+          },
+          {
+            "name": "Microsoft.Identity.Client.Extensions.Msal",
+            "version": "4.61.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Microsoft.Identity.Client.Extensions.Msal"
+            ]
+          },
+          {
+            "name": "Microsoft.IdentityModel.Abstractions",
+            "version": "6.35.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Microsoft.Identity.Client \u003E Microsoft.IdentityModel.Abstractions"
+            ]
+          },
+          {
+            "name": "Microsoft.NET.Test.Sdk",
+            "version": "17.11.1",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Tests\\MotorValley.Tests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Microsoft.OpenApi",
+            "version": "1.6.22",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.Swagger \u003E Microsoft.OpenApi"
+            ]
+          },
+          {
+            "name": "Microsoft.TestPlatform.ObjectModel",
+            "version": "17.11.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.NET.Test.Sdk \u003E Microsoft.TestPlatform.TestHost \u003E Microsoft.TestPlatform.ObjectModel"
+            ]
+          },
+          {
+            "name": "Microsoft.TestPlatform.TestHost",
+            "version": "17.11.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.NET.Test.Sdk \u003E Microsoft.TestPlatform.TestHost"
+            ]
+          },
+          {
+            "name": "Moq",
+            "version": "4.20.72",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Tests\\MotorValley.Tests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "Newtonsoft.Json",
+            "version": "13.0.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.NET.Test.Sdk \u003E Microsoft.TestPlatform.TestHost \u003E Newtonsoft.Json"
+            ]
+          },
+          {
+            "name": "Npgsql",
+            "version": "8.0.5",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Npgsql.EntityFrameworkCore.PostgreSQL \u003E Npgsql"
+            ]
+          },
+          {
+            "name": "Npgsql.EntityFrameworkCore.PostgreSQL",
+            "version": "8.0.10",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Npgsql.EntityFrameworkCore.PostgreSQL"
+            ]
+          },
+          {
+            "name": "Oracle.EntityFrameworkCore",
+            "version": "8.23.60",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Oracle.EntityFrameworkCore"
+            ]
+          },
+          {
+            "name": "Oracle.ManagedDataAccess.Core",
+            "version": "23.6.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core"
+            ]
+          },
+          {
+            "name": "Pipelines.Sockets.Unofficial",
+            "version": "2.2.8",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E StackExchange.Redis \u003E Pipelines.Sockets.Unofficial"
+            ]
+          },
+          {
+            "name": "SQLitePCLRaw.bundle_e_sqlite3",
+            "version": "2.1.6",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite \u003E SQLitePCLRaw.bundle_e_sqlite3"
+            ]
+          },
+          {
+            "name": "SQLitePCLRaw.core",
+            "version": "2.1.6",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite \u003E Microsoft.EntityFrameworkCore.Sqlite.Core \u003E Microsoft.Data.Sqlite.Core \u003E SQLitePCLRaw.core"
+            ]
+          },
+          {
+            "name": "SQLitePCLRaw.lib.e_sqlite3",
+            "version": "2.1.6",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite \u003E SQLitePCLRaw.bundle_e_sqlite3 \u003E SQLitePCLRaw.lib.e_sqlite3"
+            ]
+          },
+          {
+            "name": "SQLitePCLRaw.provider.e_sqlite3",
+            "version": "2.1.6",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.EntityFrameworkCore.Sqlite \u003E SQLitePCLRaw.bundle_e_sqlite3 \u003E SQLitePCLRaw.provider.e_sqlite3"
+            ]
+          },
+          {
+            "name": "StackExchange.Redis",
+            "version": "2.8.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E StackExchange.Redis"
+            ]
+          },
+          {
+            "name": "Swashbuckle.AspNetCore",
+            "version": "7.2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Swashbuckle.AspNetCore"
+            ]
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.Swagger",
+            "version": "7.2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.Swagger"
+            ]
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.SwaggerGen",
+            "version": "7.2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.SwaggerGen"
+            ]
+          },
+          {
+            "name": "Swashbuckle.AspNetCore.SwaggerUI",
+            "version": "7.2.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Swashbuckle.AspNetCore \u003E Swashbuckle.AspNetCore.SwaggerUI"
+            ]
+          },
+          {
+            "name": "System.Buffers",
+            "version": "4.5.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Microsoft.Azure.SignalR.Protocols \u003E System.Buffers"
+            ]
+          },
+          {
+            "name": "System.ClientModel",
+            "version": "1.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.ClientModel"
+            ]
+          },
+          {
+            "name": "System.Configuration.ConfigurationManager",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Diagnostics.PerformanceCounter \u003E System.Configuration.ConfigurationManager"
+            ]
+          },
+          {
+            "name": "System.Diagnostics.DiagnosticSource",
+            "version": "6.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Diagnostics.DiagnosticSource"
+            ]
+          },
+          {
+            "name": "System.Diagnostics.EventLog",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Moq \u003E Castle.Core \u003E System.Diagnostics.EventLog"
+            ]
+          },
+          {
+            "name": "System.Diagnostics.PerformanceCounter",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Diagnostics.PerformanceCounter"
+            ]
+          },
+          {
+            "name": "System.DirectoryServices.Protocols",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.DirectoryServices.Protocols"
+            ]
+          },
+          {
+            "name": "System.Formats.Asn1",
+            "version": "8.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Formats.Asn1"
+            ]
+          },
+          {
+            "name": "System.IO.Pipelines",
+            "version": "5.0.1",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E StackExchange.Redis \u003E Pipelines.Sockets.Unofficial \u003E System.IO.Pipelines"
+            ]
+          },
+          {
+            "name": "System.Memory",
+            "version": "4.5.4",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Confluent.Kafka \u003E System.Memory"
+            ]
+          },
+          {
+            "name": "System.Memory.Data",
+            "version": "1.0.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Memory.Data"
+            ]
+          },
+          {
+            "name": "System.Numerics.Vectors",
+            "version": "4.5.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Numerics.Vectors"
+            ]
+          },
+          {
+            "name": "System.Reflection.Metadata",
+            "version": "1.6.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "Microsoft.NET.Test.Sdk \u003E Microsoft.TestPlatform.TestHost \u003E Microsoft.TestPlatform.ObjectModel \u003E System.Reflection.Metadata"
+            ]
+          },
+          {
+            "name": "System.Runtime.CompilerServices.Unsafe",
+            "version": "6.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Microsoft.Azure.SignalR.Protocols \u003E System.Runtime.CompilerServices.Unsafe"
+            ]
+          },
+          {
+            "name": "System.Security.Cryptography.Pkcs",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Oracle.EntityFrameworkCore \u003E Oracle.ManagedDataAccess.Core \u003E System.Security.Cryptography.Pkcs"
+            ]
+          },
+          {
+            "name": "System.Security.Cryptography.ProtectedData",
+            "version": "8.0.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E System.Security.Cryptography.ProtectedData"
+            ]
+          },
+          {
+            "name": "System.Text.Encodings.Web",
+            "version": "4.7.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E Azure.Core \u003E System.Text.Encodings.Web"
+            ]
+          },
+          {
+            "name": "System.Text.Json",
+            "version": "4.7.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E System.Text.Json"
+            ]
+          },
+          {
+            "name": "System.Threading.Tasks.Extensions",
+            "version": "4.5.4",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "MotorValley.Backend \u003E Microsoft.Azure.SignalR \u003E Azure.Identity \u003E System.Threading.Tasks.Extensions"
+            ]
+          },
+          {
+            "name": "xunit",
+            "version": "2.9.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Tests\\MotorValley.Tests.csproj"
+              }
+            ],
+            "description": "NuGet package is deprecated",
+            "compatibility": "newVersionNeeded",
+            "recommendedVersion": ""
+          },
+          {
+            "name": "xunit.abstractions",
+            "version": "2.0.3",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "xunit \u003E xunit.core \u003E xunit.extensibility.core \u003E xunit.abstractions"
+            ]
+          },
+          {
+            "name": "xunit.analyzers",
+            "version": "1.16.0",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "xunit \u003E xunit.analyzers"
+            ]
+          },
+          {
+            "name": "xunit.assert",
+            "version": "2.9.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "xunit \u003E xunit.assert"
+            ]
+          },
+          {
+            "name": "xunit.core",
+            "version": "2.9.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "xunit \u003E xunit.core"
+            ]
+          },
+          {
+            "name": "xunit.extensibility.core",
+            "version": "2.9.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "xunit \u003E xunit.core \u003E xunit.extensibility.core"
+            ]
+          },
+          {
+            "name": "xunit.extensibility.execution",
+            "version": "2.9.2",
+            "isTransitive": true,
+            "isGlobal": false,
+            "isImplicit": false,
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": "",
+            "transitiveChain": [
+              "xunit \u003E xunit.core \u003E xunit.extensibility.execution"
+            ]
+          },
+          {
+            "name": "xunit.runner.visualstudio",
+            "version": "2.8.2",
+            "isTransitive": false,
+            "isGlobal": false,
+            "isImplicit": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Tests\\MotorValley.Tests.csproj"
+              }
+            ],
+            "description": "",
+            "compatibility": "valid",
+            "recommendedVersion": ""
+          }
+        ],
+        "assemblies": [],
+        "projectReferences": [
+          {
+            "name": "MotorValley.Backend",
+            "isTransitive": false,
+            "definedIn": [
+              {
+                "path": "MotorValley.Tests\\MotorValley.Tests.csproj"
+              }
+            ],
+            "referencedProjectPath": "MotorValley.Backend\\MotorValley.Backend.csproj",
+            "compatibility": "valid"
+          }
+        ],
+        "frameworkReferences": []
+      }
+    }
+  ]
+}

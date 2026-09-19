@@ -31,7 +31,7 @@ public class InMemoryCacheService : ICacheService
     public Task SetAsync<T>(string key, T value, TimeSpan? expiry = null, CancellationToken ct = default)
     {
         var json = System.Text.Json.JsonSerializer.Serialize(value);
-        var expiresAt = DateTimeOffset.UtcNow.Add(expiry ?? TimeSpan.FromMinutes(5));
+        var expiresAt = DateTimeOffset.UtcNow.Add(expiry ?? TimeSpan.FromMinutes(5d));
         _store[key] = (json, expiresAt);
         return Task.CompletedTask;
     }
