@@ -7,7 +7,7 @@
 #   PostgreSQL -> SQLite (a single motorvalley.db file)
 #   Redis      -> in-process memory cache
 #
-# Requires only the .NET 8 SDK, Python 3.10+, and Node.js 18+.
+# Requires only the .NET 10 SDK, Python 3.10+, and Node.js 18+.
 # All services run as background jobs of this script; Ctrl+C stops the whole stack.
 #
 # Usage:  ./run-local.sh [NUM_MACHINES]     (default 120)
@@ -24,7 +24,7 @@ source_mode="${SOURCE:-sim}"
 
 need() { command -v "$1" >/dev/null 2>&1 || { echo "Required tool '$1' not found on PATH. $2"; exit 1; }; }
 echo "Checking prerequisites..."
-need dotnet "Install the .NET 8 SDK from https://dotnet.microsoft.com/download"
+need dotnet "Install the .NET 10 SDK from https://dotnet.microsoft.com/download"
 need node   "Install Node.js 18+ from https://nodejs.org/"
 need npm    "Install Node.js 18+ (npm ships with it) from https://nodejs.org/"
 python_bin="$(command -v python3 || command -v python || true)"

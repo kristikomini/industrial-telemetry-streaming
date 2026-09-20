@@ -8,7 +8,7 @@
       - PostgreSQL-> SQLite  (a single motorvalley.db file)
       - Redis     -> in-process memory cache
     Each service launches in its own PowerShell window so you can read its logs and
-    stop it with Ctrl+C. Requires only the .NET 8 SDK, Python 3.10+, and Node.js 18+.
+    stop it with Ctrl+C. Requires only the .NET 10 SDK, Python 3.10+, and Node.js 18+.
 
 .PARAMETER Machines
     Number of simulated machines the producer runs (default 120).
@@ -40,7 +40,7 @@ function Confirm-Command($name, $hint) {
 }
 
 Write-Host "Checking prerequisites..." -ForegroundColor Cyan
-Confirm-Command dotnet "Install the .NET 8 SDK from https://dotnet.microsoft.com/download"
+Confirm-Command dotnet "Install the .NET 10 SDK from https://dotnet.microsoft.com/download"
 Confirm-Command node   "Install Node.js 18+ from https://nodejs.org/"
 Confirm-Command npm    "Install Node.js 18+ (npm ships with it) from https://nodejs.org/"
 

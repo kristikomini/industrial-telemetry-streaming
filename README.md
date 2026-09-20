@@ -1,7 +1,7 @@
 # Motor Valley Sentinel
 
 [![CI](https://github.com/kristikomini/Motor-Valley-Sentinel/actions/workflows/ci.yml/badge.svg)](https://github.com/kristikomini/Motor-Valley-Sentinel/actions/workflows/ci.yml)
-[![.NET](https://img.shields.io/badge/.NET-8.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
+[![.NET](https://img.shields.io/badge/.NET-10.0-512BD4?logo=dotnet&logoColor=white)](https://dotnet.microsoft.com/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-informational)](LICENSE)
 
 Real-time condition monitoring for a factory floor. 120 simulated machines stream
@@ -18,8 +18,8 @@ flowchart LR
     T1(["sensor-data"]):::kafka
     P["Stream processor<br/><i>Python · FastAPI</i><br/>per-machine state"]:::py
     T2(["critical-alerts"]):::kafka
-    C["Alert consumer<br/><i>.NET 8 · C#</i>"]:::net
-    API["REST API<br/><i>.NET 8 · C#</i>"]:::net
+    C["Alert consumer<br/><i>.NET 10 · C#</i>"]:::net
+    API["REST API<br/><i>.NET 10 · C#</i>"]:::net
     HUB["SignalR hub"]:::net
     DB[("PostgreSQL / Oracle")]:::infra
     R[("Redis")]:::infra
@@ -150,7 +150,7 @@ None of the application logic changes — the alerting rule, the idempotent writ
 cache-aside read, and the SignalR push are identical on both paths. Only the transport and
 the two backing stores are swapped by configuration.
 
-Prerequisites: the **.NET 8 SDK**, **Python 3.10+**, and **Node.js 18+**. Then, from the
+Prerequisites: the **.NET 10 SDK**, **Python 3.10+**, and **Node.js 18+**. Then, from the
 repo root:
 
 ```bash
@@ -289,8 +289,8 @@ way they are:
 | Ingest | Python 3, `asyncio`, `aiokafka` |
 | Broker | Apache Kafka 7.5 (Confluent), Zookeeper |
 | Stream processing | Python, FastAPI, `aiokafka` consumer + producer |
-| API & alert consumer | .NET 8 (LTS), ASP.NET Core, `Confluent.Kafka` 2.6 |
-| Persistence | PostgreSQL 16 (default) or Oracle, EF Core 8 — provider-swappable |
+| API & alert consumer | .NET 10 (LTS), ASP.NET Core, `Confluent.Kafka` 2.6 |
+| Persistence | PostgreSQL 16 (default) or Oracle, EF Core 10 — provider-swappable |
 | Cloud / deployment | Azure Container Apps + PaaS, Bicep IaC (see `deploy/azure/`) |
 | CI/CD | GitHub Actions — build & test on every push, gated deploy to Azure |
 | Cache | Redis 7, StackExchange.Redis |
