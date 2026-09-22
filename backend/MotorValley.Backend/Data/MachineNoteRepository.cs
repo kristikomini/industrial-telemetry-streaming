@@ -22,4 +22,21 @@ public class MachineNoteRepository : IMachineNoteRepository
             .OrderByDescending(n => n.CreatedAt)
             .ToListAsync();
     }
+
+    public async Task<MachineNote?> GetByIdAsync(int id)
+    {
+        return await _db.MachineNotes.FindAsync(id);
+    }
+
+    public async Task UpdateAsync(MachineNote note)
+    {
+        _db.MachineNotes.Update(note);
+        await _db.SaveChangesAsync();
+    }
+
+    public async Task DeleteAsync(MachineNote note)
+    {
+        _db.MachineNotes.Remove(note);
+        await _db.SaveChangesAsync();
+    }
 }

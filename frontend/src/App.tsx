@@ -3,6 +3,7 @@ import { AlertFeed } from './components/AlertFeed'
 import { MachineHealthChart, type TopFailingMachine } from './components/MachineHealthChart'
 import { ChartSkeleton } from './components/ChartSkeleton'
 import { StatBar } from './components/StatBar'
+import { MachineNotes } from './components/MachineNotes'
 import { useAlertHub, type ConnectionStatus } from './hooks/useAlertHub'
 
 export interface CriticalAlert {
@@ -34,6 +35,7 @@ function App() {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
   const [lastUpdated, setLastUpdated] = useState<Date | null>(null)
+  const [selectedMachine, setSelectedMachine] = useState<string | null>(null)
   const { alerts, status } = useAlertHub()
   const conn = STATUS_DISPLAY[status]
 
@@ -41,6 +43,7 @@ function App() {
     try {
       const data = await fetchTopFailing()
       setTopFailing(data)
+      setSelectedMachine((prev) => prev ?? data[0]?.machineId ?? null)
       setLastUpdated(new Date())
       setError(null)
     } catch (e) {
@@ -143,6 +146,32 @@ function App() {
             Live Alert Feed
           </h2>
           <AlertFeed alerts={alerts} />
+        </div>
+        <div>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', gap: 8, flexWrap: 'wrap' }}>
+            <h2 style={{ fontSize: '1.1rem', margin: 0 }}>Machine Notes</h2>
+            <select
+              aria-label="Select machine for notes"
+              value={selectedMachine ?? ''}
+              onChange={(e) => setSelectedMachine(e.target.value || null)}
+              style={{
+                background: 'var(--surface)',
+                border: '1px solid var(--border)',
+                borderRadius: 6,
+                color: 'inherit',
+                padding: '0.4rem 0.5rem',
+                font: 'inherit',
+              }}
+            >
+              {topFailing.length === 0 && <option value="">No machines</option>}
+              {topFailing.map((m) => (
+                <option key={m.machineId} value={m.machineId}>
+                  {m.machineId}
+                </option>
+              ))}
+            </select>
+          </div>
+          <MachineNotes machineId={selectedMachine} />
         </div>
       </div>
     </div>

@@ -65,4 +65,57 @@ public class MachineNoteRepositoryTests : IDisposable
         Assert.Equal("newer", notes[0].Text);
         Assert.Equal("older", notes[1].Text);
     }
+
+    [Fact]
+    public async Task GetByIdAsync_ReturnsNote_WhenExists()
+    {
+        var repo = new MachineNoteRepository(_db);
+        var note = new MachineNote { MachineId = "M-001", Text = "find me", Author = "Kristi" };
+        await repo.AddAsync(note);
+
+        var found = await repo.GetByIdAsync(note.Id);
+
+        Assert.NotNull(found);
+        Assert.Equal("find me", found.Text);
+    }
+
+    [Fact]
+    public async Task GetByIdAsync_ReturnsNull_WhenNotFound()
+    {
+        var repo = new MachineNoteRepository(_db);
+
+        var found = await repo.GetByIdAsync(12345);
+
+        Assert.Null(found);
+    }
+
+    [Fact]
+    public async Task UpdateAsync_PersistsChanges()
+    {
+        var repo = new MachineNoteRepository(_db);
+        var note = new MachineNote { MachineId = "M-001", Text = "before", Author = "Kristi" };
+        await repo.AddAsync(note);
+
+        note.Text = "after";
+        note.Author = "Editor";
+        await repo.UpdateAsync(note);
+
+        var saved = await _db.MachineNotes.FindAsync(note.Id);
+        Assert.NotNull(saved);
+        Assert.Equal("after", saved.Text);
+        Assert.Equal("Editor", saved.Author);
+    }
+
+    [Fact]
+    public async Task DeleteAsync_RemovesNote()
+    {
+        var repo = new MachineNoteRepository(_db);
+        var note = new MachineNote { MachineId = "M-001", Text = "delete me", Author = "Kristi" };
+        await repo.AddAsync(note);
+
+        await repo.DeleteAsync(note);
+
+        var saved = await _db.MachineNotes.FindAsync(note.Id);
+        Assert.Null(saved);
+    }
 }

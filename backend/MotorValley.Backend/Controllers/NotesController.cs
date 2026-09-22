@@ -42,6 +42,35 @@ public async Task<IActionResult> AddNote(string machineId, [FromBody] MachineNot
     return CreatedAtAction(nameof(GetNotes), new { machineId }, note);
 }
 
+    [HttpPut("{id}")]
+public async Task<IActionResult> UpdateNote(string machineId, int id, [FromBody] MachineNoteDto dto)
+{
+    var note = await _machineNoteRepository.GetByIdAsync(id);
+    if (note is null || note.MachineId != machineId)
+    {
+        return NotFound();
+    }
+
+    note.Text = dto.Text;
+    note.Author = dto.Author;
+
+    await _machineNoteRepository.UpdateAsync(note);
+    return Ok(note);
+}
+
+    [HttpDelete("{id}")]
+public async Task<IActionResult> DeleteNote(string machineId, int id)
+{
+    var note = await _machineNoteRepository.GetByIdAsync(id);
+    if (note is null || note.MachineId != machineId)
+    {
+        return NotFound();
+    }
+
+    await _machineNoteRepository.DeleteAsync(note);
+    return NoContent();
+}
+
 }
 
 }
