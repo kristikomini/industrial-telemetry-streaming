@@ -8,6 +8,7 @@ public class AppDbContext : DbContext
     public AppDbContext(DbContextOptions<AppDbContext> options) : base(options) { }
 
     public DbSet<CriticalAlert> CriticalAlerts => Set<CriticalAlert>();
+    public DbSet<MachineNote> MachineNotes => Set<MachineNote>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -24,6 +25,15 @@ public class AppDbContext : DbContext
             // and it also makes the "latest row per machine" join in
             // GetTopFailingWithCountsAsync unambiguous.
             e.HasIndex(x => new { x.MachineId, x.Timestamp }).IsUnique();
+        });
+
+        modelBuilder.Entity<MachineNote>(e =>
+        {
+            e.HasKey(x => x.Id);
+            e.Property(x => x.MachineId).HasMaxLength(64);
+            e.Property(x => x.Text).HasMaxLength(512);
+            e.Property(x => x.Author).HasMaxLength(64);
+            e.HasIndex(x => x.MachineId);
         });
     }
 }

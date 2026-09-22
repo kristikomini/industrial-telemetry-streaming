@@ -61,6 +61,8 @@ else
 // Alert ingestion pipeline (persist → fan-out → cache), shared by both transports.
 builder.Services.AddScoped<IAlertRepository, AlertRepository>();
 builder.Services.AddScoped<IAlertIngestionService, AlertIngestionService>();
+builder.Services.AddScoped<IMachineNoteRepository, MachineNoteRepository>();
+
 
 // Kafka consumer — the default transport. Disabled (Kafka:Enabled=false) in the no-Docker
 // path, where the processor delivers alerts over HTTP to the IngestController instead.
