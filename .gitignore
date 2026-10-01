@@ -24,6 +24,7 @@ build/
 bin/
 obj/
 out/
+*.tsbuildinfo
 
 # IDE
 .idea/
