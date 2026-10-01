@@ -113,6 +113,41 @@ staleness between an overheat and the operator seeing it.
 
 ---
 
+## Maintenance notes
+
+Everything above flows one way: sensors produce, the processor derives, the dashboard
+displays. Notes are the one place a human writes back. An alert can say a machine ran hot
+three readings running; it cannot say the bearing was replaced last Tuesday and this is
+expected. Notes attach that context to the machine, so whoever reads the alert next sees
+both halves.
+
+Four endpoints, each scoped under the machine the note belongs to:
+
+| Method | Route | Does |
+|---|---|---|
+| `GET` | `/api/machines/{machineId}/notes` | Every note for the machine, newest first |
+| `POST` | `/api/machines/{machineId}/notes` | Add a note |
+| `PUT` | `/api/machines/{machineId}/notes/{id}` | Replace a note's text and author |
+| `DELETE` | `/api/machines/{machineId}/notes/{id}` | Remove a note |
+
+**The route nests for a reason.** `PUT` and `DELETE` load the note and check its
+`MachineId` against the route before touching it, returning `404` when the two disagree.
+Ids are sequential integers, so trusting the id alone would let anyone edit any note on
+any machine by counting upwards. `Text` and `Author` are both required, capped at 2000 and
+100 characters.
+
+**Notes are persisted but never cached.** They go straight to PostgreSQL through EF Core —
+migration
+[`AddMachineNotes`](backend/MotorValley.Backend/Data/Migrations/20260921153849_AddMachineNotes.cs) —
+and skip Redis entirely. Alerts are cached because they arrive at ~240 readings/second and
+are read constantly; notes are read once when an operator selects a machine. A cache there
+would buy nothing and add a way to serve a note someone had just edited.
+
+In the dashboard, [`MachineNotes.tsx`](frontend/src/components/MachineNotes.tsx) hangs off
+the machine selector: pick a machine, read its notes, add one, or edit and delete in place.
+
+---
+
 ## Running it
 
 ### With Docker (the full topology)
@@ -263,8 +298,8 @@ Both suites also run in CI on every push — see [`.github/workflows/ci.yml`](.g
 
 The Python suite covers the alerting rule where the logic actually lives — no alert below
 threshold, an alert on the third consecutive breach, and the counter resetting after a
-normal reading. The xUnit suite covers the repository against EF Core's in-memory
-provider and the Redis cache round-trip.
+normal reading. The xUnit suite covers both repositories — alerts and machine
+notes — against EF Core's in-memory provider, plus the Redis cache round-trip.
 
 ## Known limitations
 
